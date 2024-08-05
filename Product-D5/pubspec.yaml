@@ -1,0 +1,10 @@
+name: Prodcut
+description: product-d5
+version: 1.0.0
+
+environment:
+  sdk: '^3.4.0'
+
+dependencies:
+  mysql1: ^0.19.1
+  collection: ^1.16.0
