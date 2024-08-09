@@ -255,11 +255,11 @@ void displayTopStudent(List<Student> studentList) {
   Student? topStudent;
   int highestScore = -1;
 
-  for (var student in studentList) {
-    for (var subject in student.subjects) {
-      if (subject.name.toLowerCase() == subjectName.toLowerCase()) {
-        for (var score in subject.scores) {
-          if (score > highestScore) {
+  for (var student in studentList) {              //  duyệt qua tất cả các sinh viên trong danh sách studentList.
+    for (var subject in student.subjects) {       //  duyệt qua tất cả các môn học mà sinh viên đang học.
+      if (subject.name.toLowerCase() == subjectName.toLowerCase()) {      //  kiểm tra xem tên môn học hiện tại có trùng khớp với tên môn học mà người dùng đã nhập (so sánh không phân biệt chữ hoa/thường).
+        for (var score in subject.scores) {        //    duyệt qua tất cả các điểm số của môn học đó.
+          if (score > highestScore) {               //  kiểm tra xem điểm số hiện tại có cao hơn điểm số cao nhất đã lưu trữ hay không
             highestScore = score;
             topStudent = student;
           }
